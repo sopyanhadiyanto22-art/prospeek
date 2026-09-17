@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil — KOPULE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brandDark: '#0a192f', brandGold: '#d4af37', brandGreen: '#1b4332' } } } }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <nav class="bg-brandDark text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="beranda.html" class="text-2xl font-bold tracking-wide text-brandGold">KOPULE<span class="text-white">.id</span></a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="beranda.html" class="hover:text-brandGold transition">Beranda</a>
+                <a href="profil.html" class="hover:text-brandGold transition">Profil</a>
+                <a href="direktori-umkm.html" class="hover:text-brandGold transition">Direktori UMKM</a>
+                <a href="program.html" class="hover:text-brandGold transition">Program</a>
+                <a href="kontak.html" class="hover:text-brandGold transition">Kontak</a>
+            </div>
+            <button id="mobile-menu-button" aria-expanded="false" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/10 mr-2">
+                <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <div class="flex items-center gap-3">
+                <a href="profil.html#visi" class="hidden sm:inline-block border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg transition">Visi</a>
+                <a href="daftar-anggota.html" class="bg-brandGold hover:bg-yellow-600 text-brandDark font-semibold px-5 py-2 rounded-full transition shadow-md">Daftar Anggota</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="md:hidden hidden bg-brandDark text-white">
+        <div class="px-4 pt-4 pb-3 space-y-1">
+            <a href="beranda.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Beranda</a>
+            <a href="profil.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Profil</a>
+            <a href="direktori-umkm.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Direktori UMKM</a>
+            <a href="program.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Program</a>
+            <a href="kontak.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Kontak</a>
+            <div class="pt-2 border-t border-white/10 flex gap-3 p-4">
+                <a href="daftar-anggota.html" class="bg-brandGold text-brandDark px-4 py-2 rounded-lg">Daftar Anggota</a>
+                <a href="direktori-umkm.html" class="border border-white/20 px-4 py-2 rounded-lg">Direktori</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white/40 backdrop-blur-sm py-6">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#visi" class="bg-brandGold text-brandDark font-semibold px-5 py-2 rounded-lg shadow-md">Visi & Misi</a>
+            <a href="#tim" class="border border-brandGold text-brandGold px-5 py-2 rounded-lg">Tim Kami</a>
+        </div>
+    </div>
+
+    <main class="max-w-4xl mx-auto py-20 px-4 text-center">
+        <h1 class="text-3xl font-bold text-brandDark">Profil KOPULE</h1>
+        <p class="mt-4 text-gray-600">Informasi tentang visi, misi, dan struktur organisasi komunitas pelaku usaha Lebak.</p>
+    </main>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    const openIcon = document.getElementById('icon-menu');
+    const closeIcon = document.getElementById('icon-close');
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+});
+</script>
+</html>

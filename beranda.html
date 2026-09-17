@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda — KOPULE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brandDark: '#0a192f', brandGold: '#d4af37', brandGreen: '#1b4332' } } } }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <nav class="bg-brandDark text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="beranda.html" class="text-2xl font-bold tracking-wide text-brandGold">KOPULE<span class="text-white">.id</span></a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="beranda.html" class="hover:text-brandGold transition">Beranda</a>
+                <a href="profil.html" class="hover:text-brandGold transition">Profil</a>
+                <a href="direktori-umkm.html" class="hover:text-brandGold transition">Direktori UMKM</a>
+                <a href="program.html" class="hover:text-brandGold transition">Program</a>
+                <a href="kontak.html" class="hover:text-brandGold transition">Kontak</a>
+            </div>
+            <button id="mobile-menu-button" aria-expanded="false" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/10 mr-2">
+                <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <div class="flex items-center gap-3">
+                <a href="direktori-umkm.html" class="hidden sm:inline-block border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg transition">Jelajahi</a>
+                <a href="daftar-anggota.html" class="bg-brandGold hover:bg-yellow-600 text-brandDark font-semibold px-5 py-2 rounded-full transition shadow-md">Daftar Anggota</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="md:hidden hidden bg-brandDark text-white">
+        <div class="px-4 pt-4 pb-3 space-y-1">
+            <a href="beranda.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Beranda</a>
+            <a href="profil.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Profil</a>
+            <a href="direktori-umkm.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Direktori UMKM</a>
+            <a href="program.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Program</a>
+            <a href="kontak.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Kontak</a>
+            <div class="pt-2 border-t border-white/10 flex gap-3 p-4">
+                <a href="daftar-anggota.html" class="bg-brandGold text-brandDark px-4 py-2 rounded-lg">Daftar Anggota</a>
+                <a href="direktori-umkm.html" class="border border-white/20 px-4 py-2 rounded-lg">Direktori</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="relative bg-gradient-to-r from-brandDark to-brandGreen text-white py-24 px-4 text-center overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="bg-brandGold/20 text-brandGold px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide border border-brandGold/30">Wadah Pengusaha Kabupaten Lebak</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold mt-6 leading-tight">Selamat datang di <span class="text-brandGold">KOPULE</span></h1>
+            <p class="mt-4 text-lg text-gray-200">Temukan sorotan, program, dan produk unggulan dari komunitas pelaku usaha Lebak.</p>
+            <div class="mt-8 flex justify-center gap-4">
+                <a href="direktori-umkm.html" class="bg-brandGold hover:bg-yellow-600 text-brandDark font-bold px-6 py-3 rounded-lg shadow-lg transition">Jelajahi Produk</a>
+                <a href="daftar-anggota.html" class="border border-white/30 hover:bg-white/10 text-white font-bold px-6 py-3 rounded-lg transition">Gabung Sekarang</a>
+            </div>
+        </div>
+    </section>
+    <!-- FEATURED PRODUCTS -->
+    <section class="max-w-7xl mx-auto py-16 px-4">
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-bold text-brandDark">Produk Unggulan</h2>
+            <a href="direktori-umkm.html" class="text-sm text-brandGold font-semibold">Lihat Semua &rarr;</a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?w=1200&q=60" alt="Produk 1" class="h-44 w-full object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg text-gray-900">Gula Aren Murni</h3>
+                    <p class="text-sm text-gray-600 mt-2">Produk olahan lokal berkualitas ekspor dari pengerajin Lebak.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-xs font-bold text-green-600">Terverifikasi</span>
+                        <a href="#" class="text-sm text-brandDark font-semibold">Detail</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1543353071-087092ec393a?w=1200&q=60" alt="Produk 2" class="h-44 w-full object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg text-gray-900">Kerajinan Tangan</h3>
+                    <p class="text-sm text-gray-600 mt-2">Kerajinan anyaman khas Lebak, ramah lingkungan dan bernilai seni.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-xs font-bold text-green-600">Populer</span>
+                        <a href="#" class="text-sm text-brandDark font-semibold">Detail</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=1200&q=60" alt="Produk 3" class="h-44 w-full object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg text-gray-900">Olahan Kopi Lokal</h3>
+                    <p class="text-sm text-gray-600 mt-2">Kopi robusta pilihan dari petani Lebak, diolah dengan teknik tradisional.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-xs font-bold text-green-600">Baru</span>
+                        <a href="#" class="text-sm text-brandDark font-semibold">Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPCOMING PROGRAMS -->
+    <section class="bg-gray-50 py-14">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-brandDark">Program Mendatang</h2>
+                <a href="program.html" class="text-sm text-brandGold font-semibold">Semua Program &rarr;</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-semibold text-lg">Pelatihan Pemasaran Digital</h3>
+                    <p class="text-sm text-gray-600 mt-2">Pelatihan singkat untuk meningkatkan penjualan online anggota.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-xs text-gray-500">12 Okt 2026</span>
+                        <a href="#" class="text-sm text-brandGold font-semibold">Daftar</a>
+                    </div>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-semibold text-lg">Workshop Kemasan Produk</h3>
+                    <p class="text-sm text-gray-600 mt-2">Workshop desain kemasan agar produk lebih menarik pasar.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-xs text-gray-500">20 Okt 2026</span>
+                        <a href="#" class="text-sm text-brandGold font-semibold">Daftar</a>
+                    </div>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-semibold text-lg">Pendampingan Keuangan Usaha</h3>
+                    <p class="text-sm text-gray-600 mt-2">Sesi konseling untuk pengelolaan arus kas dan pembukuan sederhana.</p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-xs text-gray-500">28 Okt 2026</span>
+                        <a href="#" class="text-sm text-brandGold font-semibold">Daftar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="max-w-6xl mx-auto py-16 px-4">
+        <div class="text-center mb-8">
+            <h2 class="text-2xl font-bold text-brandDark">Suara Anggota</h2>
+            <p class="text-gray-600 mt-2">Apa kata pelaku usaha tentang komunitas KOPULE</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <blockquote class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <p class="text-gray-700">"Bergabung di KOPULE membantu usaha saya menjangkau pasar lebih luas dan mendapatkan mitra kolaborasi."</p>
+                <footer class="mt-4 text-sm text-gray-500">— Siti, Pengrajin Anyaman</footer>
+            </blockquote>
+
+            <blockquote class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <p class="text-gray-700">"Program pelatihan sangat aplikatif dan langsung berdampak pada penjualan saya."</p>
+                <footer class="mt-4 text-sm text-gray-500">— Agus, Produsen Kopi</footer>
+            </blockquote>
+
+            <blockquote class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <p class="text-gray-700">"Jaringan yang saya dapat dari komunitas ini membuka peluang penjualan ke luar daerah."</p>
+                <footer class="mt-4 text-sm text-gray-500">— Lina, UKM Kuliner</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- LATEST NEWS -->
+    <section class="bg-brandDark text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Berita & Pengumuman</h2>
+                <a href="#" class="text-sm text-brandGold font-semibold">Arsip Berita &rarr;</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <article class="bg-white/10 p-4 rounded-lg">
+                    <h3 class="font-semibold">Pameran Produk Lokal — Sukses</h3>
+                    <p class="text-sm text-white/80 mt-2">Kegiatan pameran mempertemukan pelaku usaha lokal dengan pembeli dan distributor.</p>
+                </article>
+                <article class="bg-white/10 p-4 rounded-lg">
+                    <h3 class="font-semibold">Kolaborasi Pasar Digital</h3>
+                    <p class="text-sm text-white/80 mt-2">Kemitraan baru untuk memasarkan produk anggota lewat platform e-commerce.</p>
+                </article>
+                <article class="bg-white/10 p-4 rounded-lg">
+                    <h3 class="font-semibold">Program Inkubasi Bisnis</h3>
+                    <p class="text-sm text-white/80 mt-2">Dukungan intensif untuk 20 pelaku usaha terpilih musim ini.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS / LOGOS -->
+    <section class="max-w-6xl mx-auto py-12 px-4">
+        <div class="text-center mb-6">
+            <h2 class="text-xl font-bold text-brandDark">Mitra & Dukungan</h2>
+            <p class="text-gray-600 mt-2">Organisasi dan mitra yang mendukung kegiatan komunitas</p>
+        </div>
+        <div class="flex items-center justify-center gap-8 flex-wrap">
+            <img src="https://via.placeholder.com/120x40?text=Pemda" alt="Pemda" class="h-10 object-contain opacity-90">
+            <img src="https://via.placeholder.com/120x40?text=Bank" alt="Bank" class="h-10 object-contain opacity-90">
+            <img src="https://via.placeholder.com/120x40?text=Koperasi" alt="Koperasi" class="h-10 object-contain opacity-90">
+            <img src="https://via.placeholder.com/120x40?text=NGO" alt="NGO" class="h-10 object-contain opacity-90">
+        </div>
+    </section>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    const openIcon = document.getElementById('icon-menu');
+    const closeIcon = document.getElementById('icon-close');
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+});
+</script>
+</html>
