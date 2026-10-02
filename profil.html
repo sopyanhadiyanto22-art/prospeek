@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil — KOPULE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brandDark: '#0a192f', brandGold: '#d4af37', brandGreen: '#1b4332' } } } }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <nav class="bg-white text-blue-900 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="beranda.html" class="flex items-center gap-2">
+                <img src="assets/LOGO PROSPEEK.png" alt="assets/LOGO PROSPEEK.png" class="h-12 w-auto">
+            </a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="beranda.html" class="hover:text-brandGold transition">Beranda</a>
+                <a href="profil.html" class="hover:text-brandGold transition">Profil</a>
+                <a href="direktori-umkm.html" class="hover:text-brandGold transition">Direktori UMKM</a>
+                <a href="program.html" class="hover:text-brandGold transition">Program</a>
+                <a href="kontak.html" class="hover:text-brandGold transition">Kontak</a>
+            </div>
+            <button id="mobile-menu-button" aria-expanded="false" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-blue-900 hover:bg-blue-50 mr-2">
+                <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <div class="flex items-center gap-3">
+                <a href="profil.html#visi" class="hidden sm:inline-block border border-gray-200 text-blue-900 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Visi</a>
+                <a href="daftar-anggota.html" class="bg-brandGold hover:bg-yellow-600 text-brandDark font-semibold px-5 py-2 rounded-full transition shadow-md">Daftar Anggota</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="md:hidden hidden bg-brandDark text-white">
+        <div class="px-4 pt-4 pb-3 space-y-1">
+            <a href="beranda.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Beranda</a>
+            <a href="profil.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Profil</a>
+            <a href="direktori-umkm.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Direktori UMKM</a>
+            <a href="program.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Program</a>
+            <a href="kontak.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">Kontak</a>
+            <div class="pt-2 border-t border-white/10 flex gap-3 p-4">
+                <a href="daftar-anggota.html" class="bg-brandGold text-brandDark px-4 py-2 rounded-lg">Daftar Anggota</a>
+                <a href="direktori-umkm.html" class="border border-white/20 px-4 py-2 rounded-lg">Direktori</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white/40 backdrop-blur-sm py-6">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#visi" class="bg-brandGold text-brandDark font-semibold px-5 py-2 rounded-lg shadow-md">Visi & Misi</a>
+            <a href="#tim" class="border border-brandGold text-brandGold px-5 py-2 rounded-lg">Tim Kami</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="relative isolate overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80');"></div>
+            <div class="absolute inset-0 bg-brandDark/70"></div>
+            <div class="relative max-w-6xl mx-auto px-4 py-28 md:py-36">
+                <div class="max-w-2xl text-white">
+                    <p class="text-sm font-semibold tracking-[0.2em] uppercase text-brandGold">Profil Komunitas</p>
+                    <h1 class="mt-4 text-4xl md:text-6xl font-bold leading-tight">PROSPEEK</h1>
+                    <p class="mt-6 text-lg md:text-xl text-gray-200">Komunitas pelaku usaha yang mendorong pertumbuhan ekonomi lokal, kolaborasi, dan pemberdayaan UMKM di Lebak.</p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#visi" class="bg-brandGold text-brandDark font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-500 transition">Lihat Visi & Misi</a>
+                        <a href="daftar-anggota.html" class="border border-white/60 text-white px-6 py-3 rounded-full hover:bg-white/10 transition">Daftar Anggota</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="visi" class="max-w-6xl mx-auto px-4 py-20">
+            <div class="text-center mb-12">
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brandGold">Tentang Kami</p>
+                <h2 class="mt-3 text-3xl md:text-4xl font-bold text-brandDark">Visi & Misi</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-10">
+                    <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-brandGold/20 text-brandDark font-bold text-2xl">V</div>
+                    <h3 class="mt-6 text-2xl font-bold text-brandDark">Visi</h3>
+                    <p class="mt-4 text-lg leading-relaxed text-gray-700">
+                        Menjadi wadah kolaborasi utama dan penggerak ekonomi daerah bagi pelaku usaha seluruh skala di Lebak, Banten, yang berdaya saing, inovatif, serta saling menguatkan dalam menghadapi dinamika ekonomi.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-10">
+                    <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-brandGreen/10 text-brandGreen font-bold text-2xl">M</div>
+                    <h3 class="mt-6 text-2xl font-bold text-brandDark">Misi</h3>
+                    <ul class="mt-4 space-y-4 text-gray-700 text-lg leading-relaxed">
+                        <li>1. "Membangun Sinergi dan Kolaborasi"
+                            Menghubungkan pelaku usaha skala kecil, menengah, hingga besar dalam satu jaringan kerja sama yang saling menguntungkan, win-win solution.</li>
+                        <li>2."Memperkuat Ketahanan dan Motivasi Bisnis"
+                        Menyediakan ruang saling mendukung, berbagi strategi, dan menyebarkan semangat positif agar setiap anggota mampu bertahan dan tumbuh di tengah ketidakpastian ekonomi.</li>
+                        <li>3."Peningkatan Kapasitas dan Competency"
+                            Menyelenggarakan pelatihan, pendampingan, dan edukasi bisnis secara berkala guna meningkatkan taraf manajerial, digitalisasi, serta legalitas usaha para anggota.</li>
+                        <li>4."Pengembangan Akses Pasar dan Akselerasi Produk"
+                            Membuka dan memperluas jaringan pemasaran lokal, nasional, hingga lintas daerah bagi produk-produk unggulan dari anggota PROSPEEK.</li>
+                        <li>5."Kemitraan Strategis dengan Pemangku Kepentingan"
+                            Menjadi mitra proaktif pemerintah daerah Lebak, lembaga keuangan, dan asosiasi bisnis lainnya untuk memperjuangkan aspirasi serta menciptakan ekosistem bisnis yang kondusif.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="tim" class="relative overflow-hidden py-20">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80');"></div>
+            <div class="absolute inset-0 bg-brandDark/80"></div>
+
+            <div class="relative max-w-6xl mx-auto px-4">
+                <div class="text-center mb-12 text-white">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brandGold">Struktur</p>
+                    <h2 class="mt-3 text-3xl md:text-4xl font-bold">Tim Kami</h2>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-[32px] p-6 md:p-10 shadow-2xl">
+                    <div class="flex justify-center mb-10">
+                        <div class="w-full max-w-md overflow-hidden rounded-2xl bg-gradient-to-r from-brandGold to-yellow-500 text-brandDark shadow-lg border border-white/20">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Ketua Umum" class="h-64 w-full object-cover object-center">
+                            <div class="p-6 text-center">
+                                <p class="text-sm uppercase tracking-[0.2em] font-semibold">Ketua</p>
+                                <h3 class="mt-2 text-2xl font-bold">Ketua Umum</h3>
+                                <p class="mt-2 text-brandDark/80">Penanggung jawab strategis & arah organisasi</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="overflow-hidden rounded-2xl border border-white/30 bg-white/90 shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80" alt="Wakil Ketua" class="h-64 w-full object-cover object-center">
+                            <div class="p-5 text-center">
+                                <p class="text-sm uppercase tracking-[0.2em] text-brandGold">Wakil</p>
+                                <h4 class="mt-2 text-xl font-bold text-brandDark">Wakil Ketua</h4>
+                                <p class="mt-2 text-gray-600">Mendukung koordinasi program dan pengambilan keputusan</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-white/30 bg-white/90 shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80" alt="Sekretaris Umum" class="h-64 w-full object-cover object-center">
+                            <div class="p-5 text-center">
+                                <p class="text-sm uppercase tracking-[0.2em] text-brandGold">Sekretaris</p>
+                                <h4 class="mt-2 text-xl font-bold text-brandDark">Sekretaris Umum</h4>
+                                <p class="mt-2 text-gray-600">Mengelola administrasi, arsip, dan koordinasi internal</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-white/30 bg-white/90 shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80" alt="Bendahara Umum" class="h-64 w-full object-cover object-center">
+                            <div class="p-5 text-center">
+                                <p class="text-sm uppercase tracking-[0.2em] text-brandGold">Bendahara</p>
+                                <h4 class="mt-2 text-xl font-bold text-brandDark">Bendahara Umum</h4>
+                                <p class="mt-2 text-gray-600">Mengelola keuangan, anggaran, dan laporan finansial</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+                        <div class="overflow-hidden rounded-2xl border border-brandGold/30 bg-brandGold/15 shadow-lg backdrop-blur-sm">
+                            <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80" alt="Koordinator Program" class="h-52 w-full object-cover object-center">
+                            <div class="p-5 text-center">
+                                <p class="text-sm uppercase tracking-[0.2em] text-brandDark">Program</p>
+                                <h4 class="mt-2 text-lg font-bold text-brandDark">Koordinator Program</h4>
+                                <p class="mt-2 text-gray-700">Merancang kegiatan dan agenda komunitas</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-brandGreen/30 bg-brandGreen/10 shadow-lg backdrop-blur-sm">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80" alt="Koordinator UMKM" class="h-52 w-full object-cover object-center">
+                            <div class="p-5 text-center">
+                                <p class="text-sm uppercase tracking-[0.2em] text-brandGreen">UMKM</p>
+                                <h4 class="mt-2 text-lg font-bold text-brandDark">Koordinator UMKM</h4>
+                                <p class="mt-2 text-gray-700">Mengembangkan anggota dan potensi usaha</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-blue-200 bg-blue-50/90 shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=900&q=80" alt="Koordinator Publikasi" class="h-52 w-full object-cover object-center">
+                            <div class="p-5 text-center">
+                                <p class="text-sm uppercase tracking-[0.2em] text-blue-700">Media</p>
+                                <h4 class="mt-2 text-lg font-bold text-brandDark">Koordinator Publikasi</h4>
+                                <p class="mt-2 text-gray-700">Mengelola komunikasi dan promosi komunitas</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-amber-200 bg-amber-50/90 shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Koordinator Pelatihan" class="h-52 w-full object-cover object-center">
+                            <div class="p-5 text-center">
+                                <p class="text-sm uppercase tracking-[0.2em] text-amber-700">Pelatihan</p>
+                                <h4 class="mt-2 text-lg font-bold text-brandDark">Koordinator Pelatihan</h4>
+                                <p class="mt-2 text-gray-700">Menyusun edukasi dan peningkatan kapasitas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-brandDark text-white py-20">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-white/5 rounded-2xl p-8 border border-white/10">
+                        <p class="text-4xl font-bold text-brandGold">100%</p>
+                        <p class="mt-2 text-gray-200">Komitmen pemberdayaan UMKM</p>
+                    </div>
+                    <div class="bg-white/5 rounded-2xl p-8 border border-white/10">
+                        <p class="text-4xl font-bold text-brandGold">24/7</p>
+                        <p class="mt-2 text-gray-200">Dukungan dan kolaborasi komunitas</p>
+                    </div>
+                    <div class="bg-white/5 rounded-2xl p-8 border border-white/10">
+                        <p class="text-4xl font-bold text-brandGold">#1</p>
+                        <p class="mt-2 text-gray-200">Semangat inovasi lokal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    const openIcon = document.getElementById('icon-menu');
+    const closeIcon = document.getElementById('icon-close');
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+});
+</script>
+</html>

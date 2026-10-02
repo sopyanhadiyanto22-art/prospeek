@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Profil Anggota — KOPULE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { brandDark: '#0a192f', brandGold: '#d4af37', brandGreen: '#1b4332' } } } }</script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <nav class="bg-white text-blue-900 sticky top-0 z-50 shadow">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="beranda.html" class="flex items-center gap-2"><img src="assets/LOGO PROSPEEK.png" alt="KOPULE.id" class="h-8"></a>
+      <div class="hidden md:flex gap-6 items-center">
+        <a href="beranda.html" class="hover:text-brandGold">Beranda</a>
+        <a href="direktori-umkm.html" class="hover:text-brandGold">Direktori UMKM</a>
+        <a href="program.html" class="hover:text-brandGold">Program</a>
+      </div>
+      <a href="daftar-anggota.html" class="bg-brandGold text-brandDark px-4 py-2 rounded-full font-semibold">Daftar Anggota</a>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <div id="member-container" class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+      <!-- Content populated by JS -->
+      <div class="text-center text-gray-500">Memuat profil...</div>
+    </div>
+  </main>
+
+  <script>
+    const members = {
+      1: {
+        id:1, name: 'UD. Gula Aren Siti', owner: 'Siti', category: 'Kuliner', place: 'Rangkasbitung',
+        desc: 'Produsen gula aren murni, kemasan 500g, tanpa bahan pengawet. Pelayanan pengiriman ke seluruh Indonesia.',
+        contact: '0812-3456-7890', email: '',
+        images: [
+          'https://images.unsplash.com/photo-1542831371-d531d36971e6?w=900&q=80',
+          'https://images.unsplash.com/photo-1509475826633-fed577a2c71b?w=900&q=80'
+        ],
+        products: ['Gula Aren 500g']
+      },
+      2: {
+        id:2, name: 'Kerajinan Anyam Lina', owner: 'Lina', category: 'Kerajinan', place: 'Cilegon',
+        desc: 'Anyaman tangan tradisional, bahan alami, desain modern, cocok untuk souvenir dan dekorasi.',
+        contact: '', email: 'lina@example.com',
+        images: [
+          'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=900&q=80',
+          'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&q=80'
+        ],
+        products: ['Tas Anyam','Dekorasi']
+      },
+      3: {
+        id:3, name: 'Kopi Robusta Agus', owner: 'Agus', category: 'Minuman', place: 'Saketi',
+        desc: 'Kopi robusta pilihan, diproses tradisional oleh petani lokal. Tersedia dalam kemasan 250g & 500g.',
+        contact: '0813-2222-3333', email: '',
+        images: [
+          'https://images.unsplash.com/photo-1498804103079-a4f47faa6f3d?w=900&q=80',
+          'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=900&q=80'
+        ],
+        products: ['Kopi 250g','Kopi 500g']
+      },
+      4: {
+        id:4, name: 'UMKM Mebel Jaya', owner: 'Rahmat', category: 'Furnitur', place: 'Rangkasbitung',
+        desc: 'Mebel kayu lokal, pengerjaan custom dan pesanan skala kecil hingga menengah.',
+        contact: '', email: 'mebel@example.com',
+        images: [
+          'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900&q=80',
+          'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900&q=80'
+        ],
+        products: ['Meja','Kursi']
+      },
+      5: {
+        id:5, name: 'Pabrik Kue Arum', owner: 'Dewi', category: 'Kuliner', place: 'Lebak',
+        desc: 'Produsen kue tradisional dan modern, siap kirim untuk acara dan reseller.',
+        contact: '0877-9999-0000', email: '',
+        images: [
+          'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=900&q=80',
+          'https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=900&q=80'
+        ],
+        products: ['Kue Nastar','Kue Lapis']
+      },
+      6: {
+        id:6, name: 'Toko Bahan Kemas', owner: 'Budi', category: 'Bahan Kemasan', place: 'Rangkasbitung',
+        desc: 'Distributor bahan kemasan dan label, melayani grosir dan eceran.',
+        contact: '', email: 'budi@kemas.id',
+        images: [
+          'https://images.unsplash.com/photo-1553413077-190dd305871c?w=900&q=80',
+          'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=900&q=80'
+        ],
+        products: ['Plastik','Label']
+      }
+    };
+
+    function getQueryParam(name){
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name);
+    }
+
+    function renderMember(m){
+      const container = document.getElementById('member-container');
+      const images = Array.isArray(m.images) && m.images.length >= 2 ? m.images : [
+        'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=900&q=80',
+        'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&q=80'
+      ];
+
+      container.innerHTML = `
+        <div class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            ${images.map((img) => `
+              <img src="${img}" alt="${m.name}" class="h-64 w-full object-cover rounded-xl border border-gray-200 shadow-sm">
+            `).join('')}
+          </div>
+
+          <div class="flex gap-6 flex-col md:flex-row">
+            <div class="flex-1">
+              <h1 class="text-2xl font-bold text-brandDark">${m.name}</h1>
+              <p class="text-sm text-gray-600 mt-1">Pemilik: <span class="font-medium">${m.owner}</span></p>
+              <p class="text-xs text-gray-500">Kategori: ${m.category} • ${m.place}</p>
+              <p class="mt-4 text-gray-700">${m.desc}</p>
+              <div class="mt-4 bg-gray-50 p-3 rounded-lg border border-gray-100">
+                <h3 class="font-semibold">Informasi Kontak</h3>
+                <p class="text-sm text-gray-700 mt-2">Telepon: <span class="font-medium">${m.contact || '-'}</span></p>
+                <p class="text-sm text-gray-700">Email: <span class="font-medium">${m.email || '-'}</span></p>
+              </div>
+              <div class="mt-4">
+                <h3 class="font-semibold">Produk / Layanan</h3>
+                <ul class="list-disc list-inside mt-2 text-gray-700">
+                  ${m.products.map(p=>`<li>${p}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a href="https://wa.me/6281234567890?text=Halo%20admin%20PROSPEEK%2C%20saya%20ingin%20menanyakan%20detail%20anggota%20ini." target="_blank" rel="noopener" class="bg-brandGold text-brandDark px-4 py-2 rounded-lg font-semibold">Hubungi Admin</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const id = getQueryParam('id') || '1';
+      const m = members[id];
+      const container = document.getElementById('member-container');
+      if(!m){
+        container.innerHTML = '<div class="text-center text-red-600">Anggota tidak ditemukan.</div>';
+        return;
+      }
+      renderMember(m);
+    });
+  </script>
+</body>
+</html>
